@@ -4,13 +4,6 @@ from typing import List, Dict, Any
 
 
 def load_papers_by_year(csv_path: str) -> Dict[int, List[Dict[str, Any]]]:
-    """
-    Load papers from a CSV file and group them by year.
-
-    Expected columns: id, title, abstract, year
-
-    Returns a dict: {year: [paper_dict, ...]}
-    """
     papers_by_year: Dict[int, List[Dict[str, Any]]] = defaultdict(list)
 
     with open(csv_path, "r", encoding="utf-8") as f:
